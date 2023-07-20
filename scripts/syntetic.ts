@@ -277,15 +277,6 @@ const articleSchema: SchemaElement[] = [
 ];
 
 //Typed attestations testing data
-const idTestingDataSchemaMismatch = {
-    Образование: {
-        Уровень: "Высшее",
-        Название: "МГУ",
-        "Год окончания": 2020,
-        Специальность: "Программная инженерия"
-    }
-};
-
 const onlineCourseSchemaData = {
     body: {
         Курс: {

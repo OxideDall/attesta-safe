@@ -1,28 +1,12 @@
-import {
-    TASK_NODE_CREATE_SERVER,
-    TASK_NODE_GET_PROVIDER
-} from "hardhat/builtin-tasks/task-names";
-import { task } from "hardhat/config";
-import {
-    arrayify,
-    defaultAbiCoder,
-    entropyToMnemonic,
-    keccak256,
-    parseEther,
-    solidityPack,
-    toUtf8Bytes,
-    toUtf8String
-} from "ethers/lib/utils";
-import { deployed, getSchemaHash } from "../scripts/util";
+import { entropyToMnemonic, toUtf8Bytes } from "ethers/lib/utils";
 import {
     getSynteticDynamicData,
-    getSynteticTypedData,
-    idSchema
+    getSynteticTypedData
 } from "../scripts/syntetic";
-
-import { encodeAttestData } from "../scripts/util";
+import { getSchemaHash } from "../scripts/util";
 import { wordlists } from "ethers";
 import { ethers } from "hardhat";
+
 const MNEMONIC_SEED = process.env.USERS_MNEMONIC_ENTROPY as string;
 
 const HARDHAT_NETWORK_MNEMONIC = entropyToMnemonic(
