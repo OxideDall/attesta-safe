@@ -12,17 +12,17 @@ import {
 
 import { wordlists } from "ethers";
 
-const MNEMONIC_SEED = process.env.USERS_MNEMONIC_ENTROPY as string;
-
-const HARDHAT_NETWORK_MNEMONIC = entropyToMnemonic(
-    toUtf8Bytes(MNEMONIC_SEED),
-    wordlists.en
-);
-
-const HOSTNAME = "0.0.0.0";
-const PORT = 8545;
-
 task("local", "Creates local testing environment").setAction(async (_, hre) => {
+    const MNEMONIC_SEED = process.env.USERS_MNEMONIC_ENTROPY as string;
+
+    const HARDHAT_NETWORK_MNEMONIC = entropyToMnemonic(
+        toUtf8Bytes(MNEMONIC_SEED),
+        wordlists.en
+    );
+
+    const HOSTNAME = "0.0.0.0";
+    const PORT = 8545;
+
     await hre.run("compile");
 
     const hreProvider = await hre.run(TASK_NODE_GET_PROVIDER);

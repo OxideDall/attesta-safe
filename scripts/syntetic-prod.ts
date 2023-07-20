@@ -23,14 +23,15 @@ import {
 import { encodeAttestData } from "../scripts/util";
 import { wordlists } from "ethers";
 import { ethers } from "hardhat";
-const MNEMONIC_SEED = process.env.USERS_MNEMONIC_ENTROPY as string;
-
-const HARDHAT_NETWORK_MNEMONIC = entropyToMnemonic(
-    toUtf8Bytes(MNEMONIC_SEED),
-    wordlists.en
-);
 
 async function main() {
+    const MNEMONIC_SEED = process.env.USERS_MNEMONIC_ENTROPY as string;
+
+    const HARDHAT_NETWORK_MNEMONIC = entropyToMnemonic(
+        toUtf8Bytes(MNEMONIC_SEED),
+        wordlists.en
+    );
+
     const wallets = [];
 
     for (let i = 0; i < 10; i++) {
