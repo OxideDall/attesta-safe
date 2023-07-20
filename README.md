@@ -1,6 +1,6 @@
 # AttestaSafe
 
-[![NodeJS CI](https://github.com/maddevsio/attestator3000/actions/workflows/ci.yaml/badge.svg)](https://github.com/maddevsio/attestator3000/actions/workflows/ci.yaml)
+[![NodeJS CI](https://github.com/OxideDall/attesta-safe/actions/workflows/ci.yaml/badge.svg)](https://github.com/OxideDall/attesta-safe/actions/workflows/ci.yaml)
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
