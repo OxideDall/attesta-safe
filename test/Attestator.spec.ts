@@ -218,7 +218,7 @@ describe("Attestator", () => {
     });
 
     describe("Attestation", async () => {
-        it.only("Typed", async () => {
+        it("Typed", async () => {
             const orgName = "ПАО «Зелёный Банк»";
 
             const schemaName = "Данные пользователя";
